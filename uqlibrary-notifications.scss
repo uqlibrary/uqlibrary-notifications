@@ -1,0 +1,42 @@
+@import "../uqlibrary-elements/resources/theme/element";
+
+:host {
+}
+
+#iconPopupView {
+  position: relative;
+  border: 1px solid green;
+
+  #iconWrapper {
+    position: relative;
+    width: 40px;
+    border-radius: 50%;
+
+    #newMessagesCount {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $error-color;
+      color: $text-inverse;
+      text-align: center;
+      font-size: 10px;
+      padding-top: 0px;
+    }
+  }
+
+  #notificationsPopup {
+    width: 200px;
+    height: 300px;
+    border: 1px solid grey;
+    z-index: 5000;
+    color: red;
+
+    position: absolute;
+    top: 32px;
+    right: 16px;
+  }
+
+}

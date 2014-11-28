@@ -1,0 +1,55 @@
+<link rel="import" href="../uqlibrary-elements/0.5.1/lib/vulcanized.html">
+
+<polymer-element name="uqlibrary-notifications" attributes="items view">
+
+  <template>
+    <link rel="stylesheet" href="uqlibrary-notifications.css">
+
+    <div id="iconPopupView" hidden?="{{view != 'icon-popup'}}">
+      <div id="iconWrapper" on-click="{{togglePopup}}" >
+        <paper-icon-button icon="social:notifications"></paper-icon-button>
+        <div id="newMessagesCount">3</div>
+        <paper-ripple fit class="circle"></paper-ripple>
+      </div>
+      <core-overlay id="notificationsPopup">
+        asdfaegfqwergq
+        erg
+        qwe
+        gqw egqwe gqw egq weg qew
+
+      </core-overlay>
+    </div>
+
+  </template>
+
+  <script>
+    (function() {
+      Polymer('uqlibrary-notifications', {
+
+        publish: {
+          view: 'icon-popup',
+          items: {
+            observe: true,
+            value: []
+          }
+
+        },
+
+
+        created: function () {
+        },
+
+        ready: function() {
+        },
+
+        togglePopup: function() {
+          this.$.notificationsPopup.toggle();
+
+        }
+
+
+      });
+    })();
+  </script>
+
+</polymer-element>
