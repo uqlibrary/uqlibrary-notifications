@@ -25,8 +25,7 @@
   outline: none; }
 
 #iconPopupView {
-  position: relative;
-  border: 1px solid green; }
+  position: relative; }
   #iconPopupView #iconWrapper {
     position: relative;
     width: 40px;
@@ -44,11 +43,21 @@
       font-size: 10px;
       padding-top: 0px; }
   #iconPopupView #notificationsPopup {
-    width: 200px;
-    height: 300px;
-    border: 1px solid grey;
+    width: 250px;
+    max-height: 300px;
+    padding: 5px;
     z-index: 5000;
-    color: red;
-    position: absolute;
-    top: 32px;
-    right: 16px; }
+    position: fixed; }
+    #iconPopupView #notificationsPopup.arrow:before {
+      border: solid;
+      border-color: white transparent;
+      border-width: 0 5px 5px 5px;
+      content: "";
+      display: block;
+      top: 0px;
+      position: absolute;
+      z-index: 99; }
+    #iconPopupView #notificationsPopup.arrow.right-arrow:before {
+      right: 32px; }
+    #iconPopupView #notificationsPopup.arrow.left-arrow:before {
+      left: 16px; }

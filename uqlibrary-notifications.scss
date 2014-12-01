@@ -5,7 +5,6 @@
 
 #iconPopupView {
   position: relative;
-  border: 1px solid green;
 
   #iconWrapper {
     position: relative;
@@ -28,15 +27,40 @@
   }
 
   #notificationsPopup {
-    width: 200px;
-    height: 300px;
-    border: 1px solid grey;
+    width: 250px;
+    max-height: 300px;
+    padding:5px;
     z-index: 5000;
-    color: red;
+    position: fixed;
 
-    position: absolute;
-    top: 32px;
-    right: 16px;
+    &.arrow {
+      &:before {
+        border: solid;
+        border-color: $white transparent;
+        border-width: 0 5px 5px 5px;
+        content: "";
+        display: block;
+        top: 0px;
+        position: absolute;
+        z-index: 99;
+      }
+
+      &.right-arrow {
+        &:before {
+          right: 32px;
+        }
+      }
+      &.left-arrow {
+        &:before {
+          left: 16px;
+        }
+      }
+
+    }
+
+
+
+
   }
 
 }
